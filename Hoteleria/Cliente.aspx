@@ -72,9 +72,15 @@
               <div class="form-group">
     <asp:Label ID="Label4" runat="server" Text="Tipo Cliente" ForeColor="Red"></asp:Label>
                 
-                  <asp:DropDownList ID="DropDownList1" runat="server">
+                  <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource3" DataTextField="Descripcion" DataValueField="TipoCliente_iD">
          
                   </asp:DropDownList>
+                
+                  <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:BD_HotelConnectionString %>" SelectCommand="SELECT [TipoCliente_iD], [Descripcion] FROM [DML].[Tbl_TipoCliente]"></asp:SqlDataSource>
+                  <asp:EntityDataSource ID="EntityDataSource1" runat="server">
+                  </asp:EntityDataSource>
+                  <asp:SqlDataSource ID="SqlDataSource2" runat="server"></asp:SqlDataSource>
+                  <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=DESKTOP-NRAK6GG\SQLEXPRESS;Initial Catalog=BD_Hotel;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="select [TipoCliente_iD][Descripcion]  FROM [DML].[Tbl_TipoCliente]"></asp:SqlDataSource>
                 
  </div>
               <div class="col-md-12"> 
