@@ -1,4 +1,4 @@
--- =================================================
+﻿-- =================================================
 -- Autor:			Gerardo, Jose, Alvaro
 -- Fecha:			19/04/2016
 -- Descripción:		Hotel-Software
@@ -581,8 +581,15 @@ GO
 CREATE PROCEDURE [dbo].[Select_Cliente]
 AS
 BEGIN
-SELECT        *
-FROM           [DML].[Tbl_Cliente]
+SET NOCOUNT ON;
+
+select [Cliente_iD],
+[nombre],
+[apellido],
+[direccion],
+[telefono],
+[Fk_TipoCliente_iD]
+  from [DML].[Tbl_Cliente]
 END
 GO
 PRINT '20 FINALIZA PROCEDURE Tbl_Permiso 20'
@@ -704,6 +711,45 @@ FROM           [DML].[Tbl_Estadia]
 END
 GO
 PRINT '24 FINALIZA PROCEDURE Tbl_Permiso 24'
+
+
+USE [BD_Hotel]
+GO
+/****** Object:  StoredProcedure [dbo].[getDoctorById]    Script Date: 05/13/2016 03:27:47 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		<jose alberto clavijo>
+-- Create date:  <05/13/16>
+-- Description:	<obteniendo un cliente>
+-- =============================================
+Create PROCEDURE getClienteById
+
+	@intCliente_id int 
+	
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+SET NOCOUNT ON;
+
+select [Cliente_iD],
+[nombre],
+[apellido],
+[direccion],
+[telefono],
+[Fk_TipoCliente_iD]
+  from [DML].[Tbl_Cliente]
+ WHERE [Cliente_iD]=@intCliente_id
+
+
+END
+
 ------------------------------------- Soy Una Barra Separadora  :) ----------------------------------------
 -- =================================================
 --exec [dbo].[Select_Estadia]
