@@ -65,7 +65,7 @@ namespace BD_Hotel.BBL
 
             if (string.IsNullOrEmpty(obj.nombre))
             {
-                throw new ArgumentException("El Nombre del Doctor no puede ser nulo");
+                throw new ArgumentException("El Nombre del cliente no puede ser nulo");
             }
             if (string.IsNullOrEmpty(obj.apellido))
             {
@@ -100,12 +100,12 @@ namespace BD_Hotel.BBL
             }
             if (obj.clientes_id <= 0)
             {
-                throw new ArgumentException("El id del doctor no puede ser menor  o igual que a cero");
+                throw new ArgumentException("El id del cliente no puede ser menor  o igual que a cero");
             }
 
             if (string.IsNullOrEmpty(obj.nombre))
             {
-                throw new ArgumentException("El Nombre del Doctor no puede ser nulo");
+                throw new ArgumentException("El Nombre del cliente no puede ser nulo");
             }
             if (string.IsNullOrEmpty(obj.apellido))
             {

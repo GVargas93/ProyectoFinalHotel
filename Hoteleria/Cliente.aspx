@@ -105,7 +105,7 @@
                             </asp:LinkButton>
                      </ItemTemplate>
                  </asp:TemplateField>
-                 <asp:BoundField DataField="nombre" HeaderText="Nombre del Doctor" />
+                 <asp:BoundField DataField="nombre" HeaderText="Nombre del Cliente" />
                  <asp:BoundField DataField="apellido" HeaderText="Apellido" />
                    <asp:BoundField DataField="direccion" HeaderText="Direccion" />
                  <asp:BoundField DataField="telefono" HeaderText="telefono" />
