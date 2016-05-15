@@ -76,7 +76,7 @@
          
                   </asp:DropDownList>
                 
-                  <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:BD_HotelConnectionString %>" SelectCommand="SELECT [TipoCliente_iD], [Descripcion] FROM [DML].[Tbl_TipoCliente]"></asp:SqlDataSource>
+                  <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:BD_HotelConnectionString %>" SelectCommand="SELECT [TipoCliente_iD], [Descripcion] FROM [Tbl_TipoCliente]"></asp:SqlDataSource>
                   <asp:EntityDataSource ID="EntityDataSource1" runat="server">
                   </asp:EntityDataSource>
                   <asp:SqlDataSource ID="SqlDataSource2" runat="server"></asp:SqlDataSource>
