@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="FormularioHabitacion.aspx.cs" Inherits="FormularioHabitacion" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="content" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="content" runat="Server">
 
 
     <section class="row">
@@ -13,7 +13,7 @@
                 Error al Guardar la Habitacion
             </asp:Panel>
 
-            
+
             <div class="form-group">
                 <label>precio</label>
                 <asp:TextBox ID="precioTextBox" runat="server" CssClass="form-control"></asp:TextBox>
@@ -26,7 +26,7 @@
                 </asp:RequiredFieldValidator>
             </div>
 
-             <div class="form-group">
+            <div class="form-group">
                 <label>numeroCamas</label>
                 <asp:TextBox ID="numeroCamasTextBox" runat="server" CssClass="form-control"></asp:TextBox>
                 <asp:RequiredFieldValidator runat="server"
@@ -38,7 +38,7 @@
                 </asp:RequiredFieldValidator>
             </div>
 
-             <div class="form-group">
+            <div class="form-group">
                 <label>estado</label>
                 <asp:TextBox ID="estadoTextBox" runat="server" CssClass="form-control"></asp:TextBox>
                 <asp:RequiredFieldValidator runat="server"
@@ -50,7 +50,7 @@
                 </asp:RequiredFieldValidator>
             </div>
 
-             <div class="form-group">
+            <div class="form-group">
                 <label>observacion</label>
                 <asp:TextBox ID="observacionTextBox" runat="server" CssClass="form-control"></asp:TextBox>
                 <asp:RequiredFieldValidator runat="server"
@@ -75,7 +75,6 @@
                 <br />
                 <%--<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1"></asp:DropDownList>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BD_HotelConnectionString %>" SelectCommand="SELECT [TipoHabitacion_iD], [Nombre] FROM [Tbl_TipoHabitacion]"></asp:SqlDataSource> --%>
-
             </div>
 
             <br />
@@ -93,15 +92,14 @@
                 </asp:RequiredFieldValidator>
                 <br />
                 <%--<asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource2"></asp:DropDownList>
-                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:BD_HotelConnectionString %>" SelectCommand="SELECT [Hotel_iD], [Nombre] FROM [Tbl_Hotel]"></asp:SqlDataSource>--%> 
-
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:BD_HotelConnectionString %>" SelectCommand="SELECT [Hotel_iD], [Nombre] FROM [Tbl_Hotel]"></asp:SqlDataSource>--%>
             </div>
 
             <br />
             <br />
 
 
-             <asp:LinkButton ID="SaveButtonn" runat="server"
+            <asp:LinkButton ID="SaveButtonn" runat="server"
                 CssClass="btn btn-primary"
                 ValidationGroup="FormularioHabitacion"
                 OnClick="SaveButtonn_Click">

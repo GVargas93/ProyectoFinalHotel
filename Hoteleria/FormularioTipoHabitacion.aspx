@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="FormularioTipoHabitacion.aspx.cs" Inherits="FormularioTipoHabitacion" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="content" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="content" runat="Server">
 
     <section class="row">
         <div class="col-md-6">
@@ -12,7 +12,7 @@
                 Error al Guardar el tipo de Habitacion
             </asp:Panel>
 
-            
+
             <div class="form-group">
                 <label>nombre</label>
                 <asp:TextBox ID="nombreTextBox" runat="server" CssClass="form-control"></asp:TextBox>
@@ -25,7 +25,7 @@
                 </asp:RequiredFieldValidator>
             </div>
 
-             <div class="form-group">
+            <div class="form-group">
                 <label>descripcion</label>
                 <asp:TextBox ID="descripcionTextBox" runat="server" CssClass="form-control"></asp:TextBox>
                 <asp:RequiredFieldValidator runat="server"
@@ -37,11 +37,11 @@
                 </asp:RequiredFieldValidator>
             </div>
 
-             
+
             <br />
 
 
-             <asp:LinkButton ID="SaveButtonn" runat="server"
+            <asp:LinkButton ID="SaveButtonn" runat="server"
                 CssClass="btn btn-primary"
                 ValidationGroup="tipoHabitacion"
                 OnClick="SaveButtonn_Click">
